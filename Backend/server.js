@@ -1,21 +1,77 @@
 require('dotenv').config();
+
 const dns = require('dns');
 dns.setServers(['8.8.8.8', '1.1.1.1']);
+
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+
+const app = express();
+
+// ==================== MIDDLEWARE ====================
+
+// CORS
+app.use(cors({
+    origin: process.env.FRONTEND_URL || true
+}));
+
+// JSON body parser
+app.use(express.json());
+
+// Security headers
+app.use(helmet());
+
+// ==================== RATE LIMITER ====================
+
+const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: {
+        success: false,
+        message: 'Too many requests. Please try again later.'
+    }
+});
+
+// Apply rate limiter to API routes
+app.use('/api/', apiLimiter);
+
+// ==================== MODELS & PACKAGES ====================
+
 const Queue = require('./models/Queue');
 const Contact = require('./models/Contact');
-const nodemailer = require('nodemailer');
 const Testimonial = require('./models/Testimonial');
 const Visitor = require('./models/Visitor');
+
+const nodemailer = require('nodemailer');
 const multer = require('multer');
 const path = require('path');
-const app = express();
-app.use(cors());
-app.use(express.json());
+
+// ==================== CONFIG ====================
+
 const PORT = process.env.PORT || 5000;
+
+// Static uploads folder
 app.use('/uploads', express.static('uploads'));
+
+
+// ==================== YOUR EXISTING ROUTES ====================
+
+// ⚠️ YAHAN SE APNA EXISTING CODE RAKHNA HAI
+// Jaise:
+// app.get(...)
+// app.post(...)
+// app.put(...)
+// app.delete(...)
+
+// ==========================================================
+
+
+// ==================== DATABASE ====================
 // ==========================================
 // UNIQUE VISITOR
 // ==========================================
