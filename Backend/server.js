@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const dns = require('dns');
 dns.setServers(['8.8.8.8', '1.1.1.1']);
 
@@ -8,7 +7,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-
+const path = require('path');
+app.use(express.static(path.join(__dirname, "../Frontend")));
 const app = express();
 
 // ==================== MIDDLEWARE ====================
@@ -20,8 +20,6 @@ app.use(cors({
 
 // JSON body parser
 app.use(express.json());
-// Serve Frontend
-app.use(express.static(path.join(__dirname, "../Frontend")));
 // Security headers
 app.use(helmet());
 
@@ -50,7 +48,6 @@ const Visitor = require('./models/Visitor');
 
 const nodemailer = require('nodemailer');
 const multer = require('multer');
-const path = require('path');
 const jwt = require('jsonwebtoken');
 // ==========================================
 // ADMIN AUTH MIDDLEWARE
