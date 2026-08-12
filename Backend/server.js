@@ -43,7 +43,7 @@ app.use('/api/', apiLimiter);
 // ==================== MODELS & PACKAGES ====================
 
 const Queue = require('./models/Queue');
-const Contact = require('./models/Contact');
+const Contact = require('./models/contact');
 const Testimonial = require('./models/Testimonial');
 const Visitor = require('./models/Visitor');
 
