@@ -56,7 +56,7 @@ if (getTokenBtn) {
 
             // Send customer details to our Node.js backend
             const response = await fetch(
-                "http://192.168.29.102:5000/api/queue",
+                "https://ai-queue-management-system.onrender.com/api/queue",
                 {
                     method: "POST",
 
@@ -128,7 +128,7 @@ if (trackBtn) {
 
             // Get all customers from backend
             const response = await fetch(
-                "http://192.168.29.102:5000/api/queue"
+                "https://ai-queue-management-system.onrender.com/api/queue"
             );
 
             const queue = await response.json();
@@ -201,7 +201,7 @@ const queueStats = document.getElementById("queueStats");
     try {
 
         const response = await fetch(
-            "http://192.168.29.102:5000/api/queue"
+            "https://ai-queue-management-system.onrender.com/api/queue"
         );
 
         const queue = await response.json();
@@ -343,7 +343,7 @@ async function completeCustomer(customerId) {
 try {
 
     const response = await fetch(
-        `http://192.168.29.102:5000/api/queue/${customerId}/complete`,
+        `https://ai-queue-management-system.onrender.com/api/queue/${customerId}/complete`,
         {
             method: "PATCH",
             headers: {
@@ -407,7 +407,7 @@ if (loginForm) {
         try {
 
             const response = await fetch(
-                "http://192.168.29.102:5000/api/admin/login",
+                "https://ai-queue-management-system.onrender.com/api/admin/login",
                 {
                     method: "POST",
 
@@ -477,7 +477,7 @@ if (contactForm) {
         try {
 
             const response = await fetch(
-                "http://192.168.29.102:5000/api/contact",
+                "https://ai-queue-management-system.onrender.com/api/contact",
                 {
                     method: "POST",
 
@@ -573,7 +573,7 @@ if (testimonialForm) {
         try {
 
             const response = await fetch(
-                "http://192.168.29.102:5000/api/testimonials",
+                "https://ai-queue-management-system.onrender.com/api/testimonials",
                 {
                     method: "POST",
                     body: formData
@@ -624,7 +624,7 @@ async function loadPendingTestimonials() {
     try {
 
         const response = await fetch(
-            "http://192.168.29.102:5000/api/testimonials/pending"
+            "https://ai-queue-management-system.onrender.com/api/testimonials/pending"
         );
 
         const testimonials = await response.json();
@@ -658,7 +658,7 @@ async function loadPendingTestimonials() {
     testimonial.name.charAt(0).toUpperCase();
 
 const avatarContent = testimonial.photo
-    ? `<img src="http://192.168.29.102:5000${testimonial.photo}"
+    ? `<img src="https://ai-queue-management-system.onrender.com${testimonial.photo}"
             alt="${testimonial.name}"
             class="testimonial-photo">`
     : initial;
@@ -710,7 +710,7 @@ async function approveTestimonial(id) {
     try {
 
         const response = await fetch(
-            `http://192.168.29.102:5000/api/testimonials/${id}/approve`,
+            `https://ai-queue-management-system.onrender.com/api/testimonials/${id}/approve`,
             {
                 method: "PATCH",
                 headers: {
@@ -742,7 +742,7 @@ async function approveTestimonial(id) {
 async function unapproveTestimonial(id) {
     try {
         const response = await fetch(
-            `http://192.168.29.102:5000/api/testimonials/${id}/unapprove`,
+            `https://ai-queue-management-system.onrender.com/api/testimonials/${id}/unapprove`,
             {
                 method: "PATCH",
                 headers: {
@@ -769,7 +769,7 @@ async function unapproveTestimonial(id) {
 async function deleteTestimonial(id) {
     try {
         const response = await fetch(
-            `http://192.168.29.102:5000/api/testimonials/${id}`,
+            `https://ai-queue-management-system.onrender.com/api/testimonials/${id}`,
             {
                 method: "DELETE",
                 headers: {
@@ -813,7 +813,7 @@ async function loadApprovedTestimonials() {
     try {
 
         const response = await fetch(
-            "http://192.168.29.102:5000/api/testimonials/approved"
+            "https://ai-queue-management-system.onrender.com/api/testimonials/approved"
         );
 
         const testimonials = await response.json();
@@ -895,7 +895,7 @@ testimonials.forEach(testimonial => {
             .toUpperCase();
 
     const avatarContent = testimonial.photo
-        ? `<img src="http://192.168.29.102:5000${testimonial.photo}"
+        ? `<img src="https://ai-queue-management-system.onrender.com${testimonial.photo}"
                 alt="${testimonial.name}"
                 class="testimonial-photo">`
         : initial;
@@ -952,7 +952,7 @@ async function loadApprovedTestimonialsAdmin() {
     try {
 
         const response = await fetch(
-            "http://192.168.29.102:5000/api/testimonials/approved"
+            "https://ai-queue-management-system.onrender.com/api/testimonials/approved"
         );
 
         const testimonials = await response.json();
@@ -1335,7 +1335,7 @@ if (sendChat && chatInput && chatMessages) {
         try {
 
             const response =
-                await fetch("http://192.168.29.102:5000/api/queue");
+                await fetch("https://ai-queue-management-system.onrender.com/api/queue");
 
             const queue =
                 await response.json();
