@@ -20,7 +20,8 @@ app.use(cors({
 
 // JSON body parser
 app.use(express.json());
-
+// Serve Frontend
+app.use(express.static(path.join(__dirname, "../Frontend")));
 // Security headers
 app.use(helmet());
 
