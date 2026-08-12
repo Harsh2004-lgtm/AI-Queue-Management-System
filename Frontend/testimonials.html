@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Share Your Experience - AI Queue</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            AI Queue
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+        <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+    <main class="testimonial-form-page">
+
+        <section class="testimonial-form-card">
+
+            <h1>Share Your Experience</h1>
+
+            <p>
+                Your feedback helps us improve our queue management system.
+            </p>
+
+            <form id="testimonialForm">
+
+                <!-- Name -->
+                <label for="testimonialName">
+                    Your Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="testimonialName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <!-- Rating -->
+                <label>
+                    Your Rating *
+                </label>
+
+                <div class="star-rating">
+
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">★</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+
+                </div>
+
+                <!-- Feedback -->
+                <label for="testimonialFeedback">
+                    Your Feedback *
+                </label>
+
+                <textarea
+                    id="testimonialFeedback"
+                    placeholder="Tell us about your experience"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <!-- Photo -->
+                <label for="testimonialPhoto">
+                    Profile Photo (Optional)
+                </label>
+
+                <input
+                    type="file"
+                    id="testimonialPhoto"
+                    accept="image/png, image/jpeg, image/webp"
+                >
+
+                <small>
+                    JPG, PNG or WebP. Photo is optional.
+                </small>
+
+                <button type="submit">
+                    Submit Review
+                </button>
+
+            </form>
+
+            <p id="testimonialResult"></p>
+
+        </section>
+
+    </main>
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

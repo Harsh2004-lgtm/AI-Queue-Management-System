@@ -1,0 +1,1802 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+header{
+    background-color: #222;
+    align-items: center;
+    padding: 30px 50px;
+    display: flex;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    color:#fff;
+    margin:30px;
+}
+header > button{
+    margin-left: auto;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+button{
+    background: #00a86b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+.buttons button:hover{
+    background: #007a4d;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+}
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+    color:#003366 ;
+}
+.hero p{
+    font-size: 24px;
+    margin:20px 0;
+    color: #555;
+}
+
+/* ==========================================
+   TRACK QUEUE PAGE
+   ========================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#tokenNumber {
+    display: block;
+    width: 280px;
+    padding: 12px;
+    margin: 0 auto 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#trackBtn {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#queueResult {
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#queueResult h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#queueResult h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#queueResult p {
+    font-size: 17px;
+    margin: 15px 0;
+}
+#queueResult:empty {
+    display: none;
+}
+/* ==========================================
+   BUTTON HOVER EFFECT
+   ========================================== */
+
+button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(0);
+}
+/* ==========================================
+   ADMIN DASHBOARD
+   ========================================== */
+
+#nextCustomerBtn {
+    display: block;
+    margin: 20px auto 30px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#currentCustomer {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#adminQueue {
+    max-width: 900px;
+    margin: auto;
+}
+
+#adminQueue > div {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+#adminQueue h3 {
+    margin-top: 0;
+}
+
+#currentCustomer button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#currentCustomer button:hover,
+#nextCustomerBtn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+/* ==========================================
+   QUEUE STATISTICS
+   ========================================== */
+
+.stats-container {
+    max-width: 900px;
+    margin: 20px auto 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    margin: 0 0 10px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+/* ==========================================
+   ADMIN LOGIN
+   ========================================== */
+
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 380px;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    margin-bottom: 25px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#loginForm input {
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#loginForm input:focus {
+    border-color: #00a878;
+}
+
+#loginForm button {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+#loginForm button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#loginMessage {
+    margin-top: 15px;
+    font-weight: 500;
+}
+/* ==========================================
+   ABOUT PAGE
+   ========================================== */
+
+.about-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-hero h1 {
+    margin-bottom: 15px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h2 {
+    margin-top: 0;
+}
+
+.about-card p {
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page {
+        padding: 30px 15px;
+    }
+
+}
+/* ==========================================
+   SERVICES PAGE
+   ========================================== */
+
+.services-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.services-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-hero h1 {
+    margin-bottom: 15px;
+}
+
+.services-hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h2 {
+    margin-top: 0;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.service-card button {
+    margin-top: 10px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.service-card button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-page {
+        padding: 30px 15px;
+    }
+
+}
+/* ==========================================
+   CONTACT PAGE
+   ========================================== */
+
+.contact-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.contact-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-hero h1 {
+    margin-bottom: 15px;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h2 {
+    margin-top: 0;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #00a878;
+}
+
+#contactForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#contactForm button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page {
+        padding: 30px 15px;
+    }
+
+}
+/* ==========================================
+   TESTIMONIAL FORM
+   ========================================== */
+
+.testimonial-form-page {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.testimonial-form-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-form-card h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.testimonial-form-card > p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+#testimonialForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#testimonialForm label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+#testimonialForm input[type="text"],
+#testimonialForm textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+#testimonialForm input[type="text"]:focus,
+#testimonialForm textarea:focus {
+    border-color: #00a878;
+}
+
+#testimonialPhoto {
+    padding: 8px;
+}
+
+#testimonialForm small {
+    margin-top: -4px;
+    opacity: 0.7;
+}
+
+/* Star rating */
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 32px;
+    cursor: pointer;
+    opacity: 0.35;
+    transition: 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    opacity: 1;
+}
+
+#testimonialForm button {
+    margin-top: 15px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+#testimonialForm button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#testimonialResult {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .testimonial-form-page {
+        padding: 30px 15px;
+    }
+
+    .testimonial-form-card {
+        padding: 25px 20px;
+    }
+
+}
+/* ==========================================
+   TESTIMONIALS SECTION
+   ========================================== */
+
+.testimonials-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 10px;
+}
+
+.testimonials-subtitle {
+    margin-bottom: 35px;
+}
+
+.testimonials-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    animation: testimonialFade 0.6s ease;
+}
+
+.testimonial-avatar {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.testimonial-card h3 {
+    margin: 10px 0;
+}
+ /* ==========================================
+    TESTIMONIAL AUTO SLIDER
+    ========================================== */
+
+.testimonials-container {
+    position: relative;
+    max-width: 900px;
+    min-height: 260px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 280px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.6s ease,
+                transform 0.6s ease;
+}
+
+.testimonial-card.slider-hidden {
+    opacity: 0;
+    transform: translateX(calc(-50% + 40px));
+}
+
+.testimonial-card.slider-visible {
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+.testimonial-stars {
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.testimonial-feedback {
+    line-height: 1.6;
+}
+
+@keyframes testimonialFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+.testimonial-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.visitor-counter {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 15px 0;
+}
+/* ==========================================
+   HIDDEN NAVIGATION MENU
+   ========================================== */
+
+.menu-hover {
+    position: relative;
+    margin-left: 20px;
+}
+
+/* Small line */
+.menu-line {
+    width: 45px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width 0.4s ease;
+}
+
+/* Menu hidden initially */
+.menu-hover ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 0;
+    overflow: hidden;
+
+    background: #222;
+    padding: 0;
+
+    opacity: 0;
+    transform: translateX(-20px);
+
+    transition: 
+        width 0.4s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* Show menu on hover */
+.menu-hover:hover ul {
+    width: 160px;
+    padding: 10px 0;
+
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Expand line */
+.menu-hover:hover .menu-line {
+    width: 160px;
+}
+
+.menu-hover ul li {
+    list-style: none;
+    padding: 8px 15px;
+}
+
+.menu-hover ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.menu-hover ul li:hover {
+    background: #00a86b;
+}
+/* ==========================================
+   HAMBURGER MENU
+   ========================================== */
+
+.hamburger-menu {
+    position: relative;
+    margin-left: 20px;
+}
+
+/* Three lines */
+.hamburger-menu > span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Hidden menu */
+.hamburger-menu ul {
+    position: absolute;
+    top: 35px;
+    left: 0;
+
+    width: 180px;
+    padding: 10px 0;
+
+    list-style: none;
+    background: #222;
+    border-radius: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+
+    transition: 0.3s ease;
+}
+
+/* Show menu on hover */
+.hamburger-menu:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Menu links */
+.hamburger-menu ul li {
+    padding: 10px 15px;
+}
+
+.hamburger-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.hamburger-menu ul li:hover {
+    background: #00a86b;
+}
+.hamburger-menu {
+    position: relative;
+    margin-left: auto;
+}
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 32px;
+}
+
+.left-menu {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* ==========================================
+   MODERN ANIMATED BACKGROUND
+   ========================================== */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    background: #f8fafc;
+}
+
+/* Animated background circles */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.25;
+    animation: floatingBlob 8s ease-in-out infinite alternate;
+}
+
+body::before {
+    background: #00a86b;
+    top: 100px;
+    left: -120px;
+}
+
+body::after {
+    background: #4facfe;
+    bottom: 50px;
+    right: -120px;
+    animation-delay: 2s;
+}
+
+@keyframes floatingBlob {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(80px, 50px) scale(1.2);
+    }
+}
+
+
+/* ==========================================
+   HERO ANIMATION
+   ========================================== */
+
+.hero h1 {
+    animation: heroTitle 1s ease-out;
+}
+
+.hero p {
+    animation: heroSubtitle 1.2s ease-out;
+}
+
+.hero .buttons {
+    animation: heroButtons 1.4s ease-out;
+}
+
+@keyframes heroTitle {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroSubtitle {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroButtons {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   HERO BUTTON EFFECT
+   ========================================== */
+
+.hero .buttons button {
+    transition: all 0.3s ease;
+}
+
+.hero .buttons button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 168, 107, 0.25);
+}
+/* ==========================================
+   HAMBURGER MENU - FIXED
+   ========================================== */
+
+.hamburger-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Three lines */
+.hamburger-menu > span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.hamburger-menu ul {
+    position: absolute;
+    top: 35px;
+    left: 0;
+
+    width: 180px;
+
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+
+    background: #222;
+    border-radius: 0 0 8px 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Show only when hovering hamburger */
+.hamburger-menu:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown items */
+.hamburger-menu ul li {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.hamburger-menu ul li a {
+    display: block;
+    width: 100%;
+
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover item */
+.hamburger-menu ul li:hover {
+    background: #00a86b;
+}
+/* ==========================================
+   AI CHATBOT
+   ========================================== */
+
+.chatbot {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+}
+
+/* AI floating button */
+
+.chatbot-btn {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #00a86b;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.chatbot-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Chat box */
+
+.chatbot-box {
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+
+    width: 330px;
+    height: 420px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px) scale(0.95);
+
+    transition: all 0.3s ease;
+}
+
+/* Open chat when hovering AI button/chatbox */
+
+.chatbot:hover .chatbot-box {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0) scale(1);
+}
+
+/* Header */
+
+.chatbot-header {
+    background: #222;
+    color: white;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+}
+
+#closeChatbot {
+    background: transparent;
+    color: white;
+
+    font-size: 22px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+/* Messages */
+
+.chat-messages {
+    height: 300px;
+    padding: 15px;
+
+    overflow-y: auto;
+}
+
+.bot-message {
+    background: #f1f1f1;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    width: fit-content;
+    max-width: 85%;
+}
+
+/* Input */
+
+.chat-input {
+    display: flex;
+    gap: 8px;
+
+    padding: 10px;
+
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+}
+.user-message {
+    background: #00a86b;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin: 8px 0 8px auto;
+    width: fit-content;
+    max-width: 85%;
+}
+/* ==========================================
+   JOIN QUEUE PAGE
+   ========================================== */
+
+.queue-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    background: #f8fafc;
+}
+
+.queue-card {
+    width: 420px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    animation: queueCardEntry 0.7s ease;
+}
+
+.queue-card h1 {
+    margin-bottom: 10px;
+    color: #003366;
+    font-size: 34px;
+}
+
+.queue-card > p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.queue-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.queue-form label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.queue-form input,
+.queue-form select {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.queue-form input:focus,
+.queue-form select:focus {
+    border-color: #00a86b;
+    box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.12);
+}
+
+.queue-form button {
+    margin-top: 18px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #00a86b;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.queue-form button:hover {
+    background: #007a4d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 168, 107, 0.25);
+}
+
+#tokenResult {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@keyframes queueCardEntry {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .queue-card {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .queue-card h1 {
+        font-size: 28px;
+    }
+}
+/* ==========================================
+   TRACK QUEUE PAGE
+   ========================================== */
+
+.track-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: #f8fafc;
+}
+
+.track-card {
+    width: 420px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    animation: trackCardEntry 0.7s ease;
+}
+
+.track-card h1 {
+    margin-bottom: 10px;
+
+    color: #003366;
+
+    font-size: 34px;
+}
+
+.track-card > p {
+    margin-bottom: 30px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+.track-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    text-align: left;
+}
+
+.track-form label {
+    font-weight: 600;
+
+    margin-top: 8px;
+}
+
+.track-form input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.track-form input:focus {
+    border-color: #00a86b;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 168, 107, 0.12);
+}
+
+.track-form button {
+    margin-top: 18px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #00a86b;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.track-form button:hover {
+    background: #007a4d;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 168, 107, 0.25);
+}
+
+
+/* Queue result */
+
+#queueResult {
+    margin-top: 25px;
+
+    text-align: left;
+}
+
+@keyframes trackCardEntry {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .track-card {
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+
+    .track-card h1 {
+        font-size: 28px;
+    }
+}
+/* ==========================================
+   MOBILE RESPONSIVE FIX
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 15px 20px;
+        min-height: 70px;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav h2 {
+        position: static;
+        transform: none;
+        font-size: 24px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .left-menu {
+        position: static;
+        gap: 10px;
+    }
+
+    .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .hamburger-menu > span {
+        width: 28px;
+        height: 3px;
+    }
+
+    .hamburger-menu ul {
+        right: 0;
+        left: auto;
+        width: 170px;
+    }
+
+    header > button {
+        margin-left: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    /* Hero buttons */
+    .buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .buttons button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+        padding: 40px 15px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 30px;
+    }
+
+    .testimonials-subtitle {
+        font-size: 17px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Chatbot */
+    .chatbot {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chatbot-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+
+    .chatbot-box {
+        width: calc(100vw - 30px);
+        max-width: 330px;
+        right: 0;
+        display:none;
+    }
+
+    /* General buttons */
+    button {
+        max-width: 100%;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 500px) {
+
+    header {
+        padding: 12px 15px;
+    }
+
+    nav h2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .left-menu {
+        gap: 5px;
+    }
+
+    header > button {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+    .buttons button {
+        width: 90%;
+    }
+}
+/* ==========================================
+   MOBILE HEADER ORDER
+   ☰ → AI Queue Management → Login
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Remove left-menu grouping only on mobile */
+    .left-menu {
+        display: contents;
+    }
+
+    /* 1️⃣ Hamburger - LEFT */
+    .hamburger-menu {
+        order: 1;
+        position: relative;
+        margin: 0;
+    }
+
+    /* 2️⃣ Title - CENTER */
+    nav h2 {
+        order: 2;
+        position: static;
+        transform: none;
+        margin: 0;
+        font-size: 22px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    /* 3️⃣ Login - RIGHT */
+    #loginBtn {
+        order: 3;
+        margin: 0;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+
+    .hamburger-menu {
+        position: relative;
+    }
+
+    .hamburger-menu ul {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        right: auto;
+
+        width: 180px;
+        padding: 10px 0;
+        margin: 0;
+
+        background: #222;
+        border-radius: 0 0 10px 10px;
+        z-index: 9999;
+    }
+
+    .hamburger-menu ul li {
+        width: 100%;
+    }
+
+    .hamburger-menu ul li a {
+        display: block;
+        padding: 12px 18px;
+        white-space: nowrap;
+    }
+}
+/* Back Button */
+.back-btn {
+    margin: 20px 30px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #0b8f68;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: #087653;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .back-btn {
+        margin: 15px;
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+}

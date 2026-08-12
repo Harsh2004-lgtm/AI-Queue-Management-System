@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Queue Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <nav>
+    <div class="left-menu">
+        <button id="loginBtn">Login</button>
+
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>AI Queue Management</h2>
+</nav>
+    </header>
+    
+        <!--Hero section-->
+        <section class="hero">
+            
+                <h1>Welcome to AI Queue Management System</h1>
+                <p>Reduce Waiting Time with Artificial Intelligence</p>
+                <div class="buttons">
+                <button id="joinQueueBtn">Join Queue</button>
+                <button id="trackQueueBtn">Track Queue</button>
+                </div>
+        </section>
+       <!-- ==========================================
+     TESTIMONIALS
+     ========================================== -->
+
+<section class="testimonials-section">
+
+    <h2>What Our Users Say</h2>
+
+    <p class="testimonials-subtitle">
+        Real experiences from people who have used our queue system.
+    </p>
+
+    <div id="approvedTestimonials" class="testimonials-container">
+        <p>Loading testimonials...</p>
+    </div>
+
+</section>
+
+<!-- Generated token will appear here -->
+<div id="tokenResult"></div>
+<div class="visitor-counter">
+    👥 <span id="visitorCount">0+ Visitors</span>
+</div>
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">Send</button>
+        </div>
+
+    </div>
+
+</div>
+        <script src="script.js"></script>
+</body>
+</html>

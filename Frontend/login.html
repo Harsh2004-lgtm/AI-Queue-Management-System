@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - AI Queue</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1>Admin Login</h1>
+
+            <p>Login to manage the queue</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Queue</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+    <div class="track-page">
+
+    <div class="track-card">
+
+        <h1>Track Your Queue</h1>
+
+        <p>
+            Enter your token number to check your queue status.
+        </p>
+
+        <div class="track-form">
+
+            <label for="tokenNumber">
+                Token Number
+            </label>
+
+            <input
+                type="text"
+                id="tokenNumber"
+                placeholder="Enter your token number"
+            >
+
+            <button id="trackBtn">
+                Track Queue 📊
+            </button>
+
+        </div>
+
+        <div id="queueResult"></div>
+
+    </div>
+
+</div>
+
+
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

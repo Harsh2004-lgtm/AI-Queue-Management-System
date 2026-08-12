@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - AI Queue Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            AI Queue
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+        <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+
+    <main class="about-page">
+
+        <section class="about-hero">
+
+            <h1>About AI Queue Management System</h1>
+
+            <p>
+                A smart queue management system designed to reduce
+                waiting time and make customer service more efficient.
+            </p>
+
+        </section>
+
+
+        <section class="about-content">
+
+            <div class="about-card">
+
+                <h2>Our Goal</h2>
+
+                <p>
+                    Our goal is to make traditional waiting lines
+                    smarter, faster and more convenient for customers
+                    and staff.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h2>How It Works</h2>
+
+                <p>
+                    Customers can join the queue, receive a token,
+                    track their queue position and see the estimated
+                    waiting time without standing in a physical line.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h2>For Staff</h2>
+
+                <p>
+                    Staff members can manage customers from the
+                    admin dashboard, call the next customer and
+                    mark completed services.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+<div class="queue-page">
+
+    <div class="queue-card">
+
+        <h1>Join Queue</h1>
+
+        <p>Enter your details to get your queue token.</p>
+
+        <div class="queue-form" id="queueForm">
+
+            <label for="customerName">Your Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+            <label for="service">Select Service</label>
+
+            <select id="service">
+                <option value="">Select Service</option>
+                <option value="Account Opening">Account Opening</option>
+                <option value="Cash Deposit">Cash Deposit</option>
+                <option value="Cash Withdrawal">Cash Withdrawal</option>
+                <option value="Loan">Loan</option>
+            </select>
+
+            <button id="getTokenBtn">
+                Get Token 🎫
+            </button>
+
+            <div id="tokenResult"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

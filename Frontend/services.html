@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services - AI Queue Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            AI Queue
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+        <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+
+    <main class="services-page">
+
+        <section class="services-hero">
+
+            <h1>Our Services</h1>
+
+            <p>
+                Smart tools designed to make queue management
+                faster and more convenient.
+            </p>
+
+        </section>
+
+
+        <section class="services-grid">
+
+            <div class="service-card">
+
+                <h2>🎟️ Generate Token</h2>
+
+                <p>
+                    Join the queue and receive a unique token number
+                    without standing in a physical line.
+                </p>
+
+                <a href="token.html">
+                    <button>Get Token</button>
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h2>📍 Track Queue</h2>
+
+                <p>
+                    Check your current queue status, people ahead
+                    and estimated waiting time.
+                </p>
+
+                <a href="track.html">
+                    <button>Track Queue</button>
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h2>⏱️ Estimated Waiting Time</h2>
+
+                <p>
+                    Get an estimated waiting time based on the number
+                    of customers ahead in the queue.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h2>👨‍💼 Admin Management</h2>
+
+                <p>
+                    Staff can manage the queue, call the next customer
+                    and mark completed services.
+                </p>
+
+                <a href="login.html">
+                    <button>Admin Login</button>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+    <div class="queue-page">
+
+    <div class="queue-card">
+
+        <h1>Join Queue</h1>
+
+        <p>
+            Enter your details to get your queue token.
+        </p>
+
+        <div class="queue-form" id="queueForm">
+
+            <label for="customerName">Your Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+            <label for="service">Select Service</label>
+
+            <select id="service">
+                <option value="">Select Service</option>
+                <option value="Account Opening">Account Opening</option>
+                <option value="Cash Deposit">Cash Deposit</option>
+                <option value="Cash Withdrawal">Cash Withdrawal</option>
+                <option value="Loan">Loan</option>
+            </select>
+
+            <button id="getTokenBtn">
+                Get Token 🎫
+            </button>
+
+            <div id="tokenResult"></div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="queue-page">
+
+    <div class="queue-card">
+
+        <h1>Join Queue</h1>
+
+        <p>Enter your details to get your queue token.</p>
+
+        <div class="queue-form" id="queueForm">
+
+            <label for="customerName">Your Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+            <label for="service">Select Service</label>
+
+            <select id="service">
+                <option value="">Select Service</option>
+                <option value="Account Opening">Account Opening</option>
+                <option value="Cash Deposit">Cash Deposit</option>
+                <option value="Cash Withdrawal">Cash Withdrawal</option>
+                <option value="Loan">Loan</option>
+            </select>
+
+            <button id="getTokenBtn">
+                Get Token 🎫
+            </button>
+
+            <div id="tokenResult"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - AI Queue Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            AI Queue
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+        <button class="back-btn" onclick="history.back()">
+    ← 
+</button>
+    <main class="contact-page">
+
+        <section class="contact-hero">
+
+            <h1>Contact Us</h1>
+
+            <p>
+                Have a question or need help with the queue system?
+                Send us a message.
+            </p>
+
+        </section>
+
+        <section class="contact-content">
+
+            <div class="contact-card">
+
+                <h2>Get in Touch</h2>
+
+                <p>
+                    We are here to help you with the
+                    AI Queue Management System.
+                </p>
+
+                <p>
+                    📧 Email: harshrama2004@gmail.com
+                </p>
+
+                <p>
+                    📞 Phone: +91 9993531593
+                </p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h2>Send a Message</h2>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="contactName"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="contactEmail"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        id="contactMessage"
+                        placeholder="Your Message"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+                <p id="contactResult"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+<!-- AI CHATBOT -->
+
+<div class="chatbot">
+
+    <button id="chatbotBtn" class="chatbot-btn">
+        🤖
+    </button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+            <div class="bot-message">
+                Hello! 👋 How can I help you?
+            </div>
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendChat">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
