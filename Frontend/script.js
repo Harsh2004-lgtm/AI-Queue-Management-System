@@ -289,12 +289,12 @@ if (nextCustomerBtn) {
        
         try {
 
-            const response = await fetch(
-                "http://192.168.29.102:5000/api/queue/next",
-                {
-                    method: "PATCH"
-                }
-            );
+   const response = await fetch("http://localhost:5000/api/queue/next", {
+    method: "PATCH",
+    headers: {
+        "Authorization": `Bearer ${localStorage.getItem("adminToken")}`
+    }
+});
 
             const customer = await response.json();
 
@@ -339,16 +339,21 @@ if (nextCustomerBtn) {
 // Complete customer
 async function completeCustomer(customerId) {
 
-    try {
+    
+try {
 
-        const response = await fetch(
-            `http://192.168.29.102:5000/api/queue/${customerId}/complete`,
-            {
-                method: "PATCH"
+    const response = await fetch(
+        `http://192.168.29.102:5000/api/queue/${customerId}/complete`,
+        {
+            method: "PATCH",
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("adminToken")}`
             }
-        );
+        }
+    );
 
-        const customer = await response.json();
+    const customer = await response.json();
+        
 
         if (!response.ok) {
             throw new Error(
@@ -425,11 +430,14 @@ if (loginForm) {
                 );
             }
 
-            loginMessage.textContent =
-                "Login successful!";
+           loginMessage.textContent =
+    "Login successful!";
 
-            // Open admin dashboard
-            window.location.href = "admin.html";
+// Save JWT token
+localStorage.setItem("adminToken", data.token);
+
+// Open admin dashboard
+window.location.href = "admin.html";
 
         } catch (error) {
 
@@ -704,7 +712,10 @@ async function approveTestimonial(id) {
         const response = await fetch(
             `http://192.168.29.102:5000/api/testimonials/${id}/approve`,
             {
-                method: "PATCH"
+                method: "PATCH",
+                headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("adminToken")}`
+                }
             }
         );
 
@@ -712,8 +723,7 @@ async function approveTestimonial(id) {
 
         if (!response.ok) {
             throw new Error(
-                data.message ||
-                "Unable to approve testimonial"
+                data.message || "Unable to approve testimonial"
             );
         }
 
@@ -729,23 +739,15 @@ async function approveTestimonial(id) {
         alert("Unable to approve testimonial.");
     }
 }
-
-
-// Delete testimonial
-
-async function deleteTestimonial(id) {
-// ==========================================
-// UNAPPROVE TESTIMONIAL
-// ==========================================
-
 async function unapproveTestimonial(id) {
-
     try {
-
         const response = await fetch(
             `http://192.168.29.102:5000/api/testimonials/${id}/unapprove`,
             {
-                method: "PATCH"
+                method: "PATCH",
+                headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("adminToken")}`
+                }
             }
         );
 
@@ -757,25 +759,22 @@ async function unapproveTestimonial(id) {
             );
         }
 
-        // Refresh approved testimonials
         loadApprovedTestimonialsAdmin();
 
     } catch (error) {
-
-        console.error(
-            "Unapprove testimonial error:",
-            error
-        );
-
+        console.error("Unapprove testimonial error:", error);
         alert("Unable to unapprove testimonial.");
     }
 }
+async function deleteTestimonial(id) {
     try {
-
         const response = await fetch(
             `http://192.168.29.102:5000/api/testimonials/${id}`,
             {
-                method: "DELETE"
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${localStorage.getItem("adminToken")}`
+                }
             }
         );
 
@@ -783,15 +782,13 @@ async function unapproveTestimonial(id) {
 
         if (!response.ok) {
             throw new Error(
-                data.message ||
-                "Unable to delete testimonial"
+                data.message || "Unable to delete testimonial"
             );
         }
 
         loadPendingTestimonials();
 
     } catch (error) {
-
         console.error(
             "Delete testimonial error:",
             error
@@ -799,13 +796,6 @@ async function unapproveTestimonial(id) {
 
         alert("Unable to delete testimonial.");
     }
-}
-
-
-// Load testimonials when admin page opens
-
-if (pendingTestimonials) {
-    loadPendingTestimonials();
 }
 // ==========================================
 // APPROVED TESTIMONIALS - HOME PAGE
@@ -1030,11 +1020,12 @@ async function loadApprovedTestimonialsAdmin() {
             "<p>Unable to load approved testimonials.</p>";
     }
 }
-
 if (approvedTestimonialsAdmin) {
     loadApprovedTestimonialsAdmin();
 }
-
+if (pendingTestimonials) {
+    loadPendingTestimonials();
+}
 // ==========================================
 // SMART AI CHATBOT
 // ==========================================

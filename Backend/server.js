@@ -50,6 +50,51 @@ const Visitor = require('./models/Visitor');
 const nodemailer = require('nodemailer');
 const multer = require('multer');
 const path = require('path');
+const jwt = require('jsonwebtoken');
+// ==========================================
+// ADMIN AUTH MIDDLEWARE
+// ==========================================
+
+function verifyAdminToken(req, res, next) {
+
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        return res.status(401).json({
+            success: false,
+            message: "Access denied. Admin login required."
+        });
+    }
+
+    const token = authHeader.split(" ")[1];
+
+    try {
+
+        const decoded = jwt.verify(
+            token,
+            process.env.JWT_SECRET
+        );
+
+        if (decoded.role !== "admin") {
+            return res.status(403).json({
+                success: false,
+                message: "Admin access required."
+            });
+        }
+
+        req.admin = decoded;
+
+        next();
+
+    } catch (error) {
+
+        return res.status(401).json({
+            success: false,
+            message: "Invalid or expired token."
+        });
+
+    }
+}
 
 // ==================== CONFIG ====================
 
@@ -237,16 +282,26 @@ app.post('/api/admin/login', async (req, res) => {
 
         const { username, password } = req.body;
 
-        // Temporary admin credentials
-        // Later we will move these to .env
         if (
-            username === "Developer" &&
-            password === "Developer456"
+            username === process.env.ADMIN_USERNAME &&
+            password === process.env.ADMIN_PASSWORD
         ) {
+
+            const token = jwt.sign(
+                {
+                    username: username,
+                    role: "admin"
+                },
+                process.env.JWT_SECRET,
+                {
+                    expiresIn: "2h"
+                }
+            );
 
             return res.status(200).json({
                 success: true,
-                message: "Login successful"
+                message: "Login successful",
+                token: token
             });
 
         }
@@ -258,9 +313,11 @@ app.post('/api/admin/login', async (req, res) => {
 
     } catch (error) {
 
+        console.error("Admin login error:", error);
+
         res.status(500).json({
             success: false,
-            message: error.message
+            message: "Server error"
         });
 
     }
@@ -429,7 +486,7 @@ app.get('/api/testimonials/pending', async (req, res) => {
 // APPROVE TESTIMONIAL
 // ==========================================
 
-app.patch('/api/testimonials/:id/approve', async (req, res) => {
+app.patch('/api/testimonials/:id/approve', verifyAdminToken, async (req, res) => {
 
     try {
 
@@ -460,7 +517,7 @@ app.patch('/api/testimonials/:id/approve', async (req, res) => {
 // UNAPPROVE TESTIMONIAL
 // ==========================================
 
-app.patch("/api/testimonials/:id/unapprove", async (req, res) => {
+app.patch("/api/testimonials/:id/unapprove", verifyAdminToken, async (req, res) => {
 
     try {
 
@@ -491,7 +548,7 @@ app.patch("/api/testimonials/:id/unapprove", async (req, res) => {
 // Finds the first waiting customer and starts serving them
 // ==========================================
 
-app.patch('/api/queue/next', async (req, res) => {
+app.patch('/api/queue/next', verifyAdminToken, async (req, res) => {
     try {
 
         // Find the oldest customer whose status is "waiting"
@@ -528,7 +585,7 @@ app.patch('/api/queue/next', async (req, res) => {
 });
 // Update a customer's status in the queue
 // Example: waiting -> serving
-app.patch('/api/queue/:id', async (req, res) => {
+app.patch('/api/queue/:id', verifyAdminToken, async (req, res) => {
     try {
 
         // Find the customer using their MongoDB ID
@@ -564,7 +621,7 @@ app.patch('/api/queue/:id', async (req, res) => {
 // Marks a customer as completed after service
 // ==========================================
 
-app.patch('/api/queue/:id/complete', async (req, res) => {
+app.patch('/api/queue/:id/complete', verifyAdminToken, async (req, res) => {
     try {
 
         // Find the customer using their MongoDB ID
