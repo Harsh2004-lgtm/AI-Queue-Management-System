@@ -1800,3 +1800,7 @@ body::after {
         font-size: 15px;
     }
 }
+h5 {
+    text-align: center;
+    font-weight: bold;
+}
