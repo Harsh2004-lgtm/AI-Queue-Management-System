@@ -8,9 +8,9 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
-app.use(express.static(path.join(__dirname, "../Frontend")));
-const app = express();
 
+const app = express();
+app.use(express.static(path.join(__dirname, "../Frontend")));
 // ==================== MIDDLEWARE ====================
 
 // CORS
