@@ -1800,7 +1800,11 @@ body::after {
         font-size: 15px;
     }
 }
-h5 {
+.developer-credit {
     text-align: center;
-    font-weight: bold;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
 }
